@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Suez One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">  
+</head>
+<body>
+
+    <div><img src="images/VITW_2.png" alt="" class="logo" ></div>
+    <header id="header">
+        <div style="width: 200px;"></div>
+        <div class="toggle"></div>
+       
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+           <li><a href="index.html#events-sec">Events</a></li> 
+           <li><a href="aboutus.html"  class="active">About us</a></li> 
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>
+            About Us
+        </h1>
+        <div>
+            <p>
+                We, the Student Council of Vidyalankar Institute of Technology are a dynamic group of student leaders, committed to enhancing the academic as well as extracurricular experience of the students. <br><br>
+                Our vision is to foster a supportive community, organize engaging events that are aligned with industrial and societal trends, events and workshops that are in line with students' interests and needs,  provide them with a platform to showcase their talent and aid holistic development. <br><br>
+               Together we strive to shape an inclusive college environment that is diverse and vibrant! <br><br>
+               Where every student can explore something they relish and rest assured that their talent finds recognition! <br><br>
+            </p>
+        </div>
+
+       <h3>For website issues contact us:</h3>
+       <p id="details">
+        Abhay Dandge (Algorhythm website) <br>
+        7385533173 <br>
+        <a href="mailto:abhay.dange@vit.edu.in">abhay.dandge@vit.edu.in</a><br><br>
+
+        Vedashree Patil (Sportsmania Website) <br>
+        9769129698 <br>
+        <a href="mailto:vedashree.patil@vit.edu.in">vedashree.patil@vit.edu.in</a> <br><br>
+
+        Ritika Bobhate (Verve Website) <br>
+        8104202383 <br>
+        <a href="mailto:ritika.bobhate@vit.edu.in">ritika.bobhate@vit.edu.in</a> <br><br>
+
+        Shweta Behera (Landing Page) <br>
+        9136867178 <br>
+        <a href="mailto:shweta.behera@vit.edu.in">shweta.behera@vit.edu.in</a> <br>
+       </p>
+
+        <img src="images/world.png" alt="" id="land">
+    </main>
+
+    
+
+    <script>
+        const toggleMenu = document.querySelector('.toggle');
+        const navlist = document.querySelector('.navlist');
+        toggleMenu.onclick = function(){
+         toggleMenu.classList.toggle('active');
+         navlist.classList.toggle('active');
+        }
+     </script>
+    
+</body>
+</html>

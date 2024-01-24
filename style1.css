@@ -1,0 +1,333 @@
+
+
+body {
+  
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#content {
+  text-align: center;
+  z-index: 1;
+}
+.logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: px;
+}
+
+
+h1{
+    padding-top:50px;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Suez One", serif;
+    text-shadow: 2px 2px 4px rgb(93, 24, 101);
+}
+
+h3{
+  font-family: "Patua One", serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 1px 1px 2px rgb(92, 30, 56);
+}
+
+h2{
+  font-family: "Patua One", serif;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  text-shadow: 1px 1px 3px rgb(92, 30, 56);
+}
+
+#header{
+  padding : 30px 100px;
+  position : absolute;
+  right : 0;
+  top : 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+}
+
+
+#header .navlist{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+#header .navlist li{
+  list-style: none;
+  margin-left: 20px;
+}
+
+
+#header .navlist li a{
+  padding : 6px 15px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Concert One", sans-serif;
+  color: rgb(220, 219, 219);
+  border-radius:10px;
+  text-shadow: 1px 1px 2px rgb(94, 29, 68);
+  transition: 0.2s;
+}
+
+.arrange1 a{
+  color : white;
+  text-shadow: 1px 1px 2px rgb(94, 29, 68);
+  margin-left : 10px;
+  margin-right: 10px;
+}
+
+#header .navlist li a:hover,
+#header .navlist li a.active{
+  text-shadow: 1px 1px 2px rgb(94, 29, 68);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:rgba(255, 255, 255, 0.515);
+  color: rgb(220, 219, 219);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius:10px;
+  border: 1px solid rgba(188, 120, 199,0.2);
+}
+
+.photos{
+  border: 15px solid transparent;
+  padding: 0px;
+  border-image: url(images/border.png) 30 round;
+}
+
+.arrange{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrange1{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#portrait{
+  align-items: center;
+  padding : 30px;
+}
+
+@media screen and (max-width: 767px){
+  
+
+  #header{
+    padding: 20px;
+    left: 0;
+  }
+
+  #header div{
+    height: 20px;
+    width : 50px;
+  }
+
+  .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: px;
+  }
+
+  #header .navlist{
+    display: none;
+  }
+
+  #header .navlist.active{
+    position: fixed;
+    padding-top: 250px;
+    left : 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height : 100vh;
+    background: rgba(80, 25, 116, 0.5);
+  }
+
+  #header .navlist li{
+    margin-right: 60px;
+    margin-left : 0;
+  }
+
+  #header .navlist li a{
+    font-size: 1.5rem;
+    margin : 5px 0;
+    display : inline-block;
+  }
+
+  
+  .toggle{
+    position: relative;
+    width : 30px;
+    height: 30px;
+    padding-left: 30px;
+    cursor : pointer;
+    background : url("images/ham1.png");
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+
+  .toggle.active{
+    position : relative;
+    top : 20px;
+    right : 20px;
+    width : 30px;
+    height: 30px;
+    background : url("images/close.png");
+    background-size : 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .arrange{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+h1{
+  padding-top:50px;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Suez One", serif;
+  text-shadow: 2px 2px 4px rgb(93, 24, 101);
+}
+
+.portrait img{
+  width : 220px;
+  height : px;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  #header{
+    padding: 20px;
+    left: 0;
+  }
+
+  #header div{
+    height: 20px;
+    width : 50px;
+  }
+
+  .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: px;
+  }
+
+  #header .navlist{
+    display: none;
+  }
+
+  #header .navlist.active{
+    position: fixed;
+    padding-top: 250px;
+    left : 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height : 100vh;
+    background: rgba(80, 25, 116, 0.5);
+  }
+
+  #header .navlist li{
+    margin-right: 60px;
+    margin-left : 0;
+  }
+
+  #header .navlist li a{
+    font-size: 1.5rem;
+    margin : 5px 0;
+    display : inline-block;
+  }
+
+  
+  .toggle{
+    position: relative;
+    width : 30px;
+    height: 30px;
+    padding-left: 30px;
+    cursor : pointer;
+    background : url("images/ham1.png");
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+
+  .toggle.active{
+    position : relative;
+    top : 20px;
+    right : 20px;
+    width : 30px;
+    height: 30px;
+    background : url("images/close.png");
+    background-size : 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .arrange{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  
+h1{
+  padding-top:50px;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Suez One", serif;
+  text-shadow: 2px 2px 4px rgb(93, 24, 101);
+}
+
+.portrait img{
+  width : 200px;
+  height : px;
+}
+
+}
+
+

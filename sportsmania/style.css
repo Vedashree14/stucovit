@@ -1,0 +1,389 @@
+html{
+  scroll-behavior: smooth;
+}
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    
+    /*position: top;
+    top: 0px;
+    height: 65px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px;*/
+  
+  }
+
+  .navbar-nav{
+    margin-left: 70%;
+    font-size: 1.2rem;
+  }
+  .nav1{
+    right: 20%;
+  }
+.nav1:hover{    
+    background-color: transparent; 
+}
+
+
+.nav-item:active{
+  
+  color: white;
+  background-color: transparent;
+} 
+
+
+
+/*preloader css*/
+
+body {
+  background-image: url("assets/Untitled design (13)_pc.png");
+  background-color: black;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+  height: 80vh; /* Ensure the background covers the entire viewport height */
+  margin: 0;
+}
+
+.countdown{
+  top: 31vh;
+  height: 66vh;
+  width: 100%;
+  position: relative;
+  background-image: url("assets/Untitled design (12) (2).png");
+ 
+  
+  box-shadow: 0px 0px 20px 40px rgba(0, 0, 0,1) inset;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1.0) 60%, transparent 100%);
+ 
+ 
+}
+
+
+h6 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3em;
+  position: relative;
+  top: 12vh;
+  left: 37%;
+}
+
+.container2 {
+  font-family: "Kanit", sans-serif;
+  background-color: transparent;
+  font-weight: 300;
+  
+  position:relative;
+  top: 7.5vw;
+  left: -1%;
+  text-align: center;
+}
+
+
+ul.date li {
+  display: inline-block;
+  font-size: 1.5em;
+  color:aliceblue;
+  list-style-type: none;
+  padding: 2em;
+  text-transform: uppercase;
+}
+
+ul.date li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  ul.date li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  ul.date li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*EVENTS*/
+
+.events{
+  font-family: "Kanit", sans-serif;
+  position: absolute;
+  top: 394vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(27, 45, 49);
+  opacity: 60%;
+  
+  border-radius: 100px;
+  transition: background 0.5s ease;
+}
+
+.container3 {
+  perspective: 1000px;
+  margin: 4%;
+  position: relative;
+  width: 380px;
+  height: 300px;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.container3:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+
+
+.container3:hover .overlay {
+  display: block;
+  background: rgb(42, 43, 43);
+}
+
+.eventimg {
+  position: absolute;
+  width: 380px;
+  height: 300px;
+  border-radius: 100px;
+  filter: brightness(90%); 
+}
+
+.title {
+  position: absolute;
+  width: 500px;
+  left: -50px;
+  top: 110px;
+  font-weight: 300;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  transition: top .5s ease;
+}
+
+.container3:hover .title {
+  top: 90px;
+}
+
+.button1 {
+  position: absolute;
+  width: 300px;
+  left:-35px;
+  top: 140px;
+  text-align: center;
+  transform: translate(0, -50%);
+  transition: opacity .35s ease;
+  z-index: 1;
+}
+
+
+.button1 a {
+  width: 70px;
+  padding: 12px 30px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+
+
+}
+
+.button2 {
+  position: absolute;
+  width: 200px;
+  left:170px;
+  top: 140px;
+  text-align: center;
+  transform: translate(0, -50%);
+  transition: opacity .35s ease;
+  z-index: 1;
+}
+
+
+.button2 a {
+  width: 170px;
+  padding: 12px 20px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+ 
+}
+
+/*for 2 link events total 3 buttons*/
+/*Register button1*/
+.button1-1 {
+  position: absolute;
+  width: 170px;
+  left:20px;
+  top: 120px;
+  text-align: center;
+  transform: translate(0, -50%);
+  opacity: 1;
+  transition: opacity .35s ease;
+  z-index: 1;
+}
+
+
+.button1-1 a {
+  width: 170px;
+  padding: 12px 20px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+/*register button2*/
+.button1-2 {
+  position: absolute;
+  width: 170px;
+  left:190px;
+  top: 120px;
+  text-align: center;
+  transform: translate(0, -50%);
+
+  transition: opacity .35s ease;
+}
+
+
+.button1-2 a {
+  width: 170px;
+  padding: 12px 20px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+}
+
+/*Rule book*/
+.button2-1 {
+  position: absolute;
+  width: 200px;
+  left:90px;
+  top: 190px;
+  text-align: center;
+  transform: translate(0, -50%);
+  transition: opacity .35s ease;
+}
+
+
+.button2-1 a {
+  width: 170px;
+  padding: 12px 20px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+
+}
+
+
+
+@media all and (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* or unset, depending on your preference */
+
+  }
+  .webgl-container {
+    display: none;
+  }
+
+  .countdown {
+    top: 150px; /* adjust based on your design */
+    height: auto; /* adjust based on your design */
+    width: 100%; /* adjust based on your design */
+  }
+
+  h6 {
+    top: 80px; /* adjust based on your design */
+    left: 50%; /* adjust based on your design */
+    transform: translateX(-50%);
+  }
+
+  .container2 {
+    top: 50px; /* adjust based on your design */
+    left: 0; /* adjust based on your design */
+  }
+
+ 
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.webgl {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 900px) {
+  body {
+    background-image: url("assets/Untitled design (13).png");
+    background-color: black;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%; /* Ensure the background covers the entire viewport height */
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+
