@@ -33,13 +33,24 @@
   </div>
   
   <script>
-      window.addEventListener('load', function () {
-          // Display loading video for 10 seconds (10000 milliseconds)
-          setTimeout(function () {
-              document.getElementById('loading-overlay').style.display = 'none';
-              document.getElementById('main-content').style.display = 'block';
-          }, 5000);
-      });
+    window.addEventListener('load', function () {
+        // Check if the loading page has been shown during the current session
+        if (!sessionStorage.getItem('loadingShown')) {
+            // Display loading video for 10 seconds (10000 milliseconds)
+            setTimeout(function () {
+                document.getElementById('loading-overlay').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+
+                // Mark that the loading page has been shown during the current session
+                sessionStorage.setItem('loadingShown', 'true');
+            }, 5000);
+        } else {
+            // If the loading page has been shown during the current session, hide it immediately
+            document.getElementById('loading-overlay').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+    });
+
   </script>
   
   <style>
