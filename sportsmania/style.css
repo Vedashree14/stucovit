@@ -1,100 +1,110 @@
-html{
-  scroll-behavior: smooth;
-}
 nav {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
     font-family: "Rajdhani", sans-serif;
     font-weight: 500;
-    
-    /*position: top;
-    top: 0px;
-    height: 65px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 40px;*/
   
   }
-
   .navbar-nav{
-    margin-left: 70%;
-    font-size: 1.2rem;
+    margin-left: 67%;
+    font-size: 1.3rem;
   }
-  .nav1{
-    right: 20%;
-  }
-.nav1:hover{    
+  
+  .nav1:hover{    
     background-color: transparent; 
 }
-
+.nav-item {
+  margin-right: 20px; /* Adjust the value to increase or decrease the space */
+}
 
 .nav-item:active{
-  
   color: white;
   background-color: transparent;
 } 
 
-
-
-/*preloader css*/
-
-body {
-  background-image: url("assets/Untitled design (13)_pc.png");
-  background-color: black;
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-attachment: fixed;
-  height: 80vh; /* Ensure the background covers the entire viewport height */
-  margin: 0;
+@media (max-width:800px){
+#logo{
+  width: 40;
+  height: 40;
+}
 }
 
+
+
+
+
+  body {
+    background-image: url("assets/Untitled design (13)_pc.png");
+    background-color: black;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh; /* Ensure the background covers the entire viewport height */
+  }
+
+  @media screen and (max-width: 900px) {
+    body {
+      background-image: url("assets/Untitled design (13).png");
+      background-color: black;
+      background-repeat: no-repeat; 
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100%; /* Ensure the background covers the entire viewport height */
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+
+/*countdown*/
 .countdown{
-  top: 31vh;
-  height: 66vh;
-  width: 100%;
-  position: relative;
-  background-image: url("assets/Untitled design (12) (2).png");
- 
-  
-  box-shadow: 0px 0px 20px 40px rgba(0, 0, 0,1) inset;
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1.0) 60%, transparent 100%);
- 
- 
+    background-image: url("assets/Untitled design (12) (2).png");
+    box-shadow: 0px 0px 20px 40px rgba(0, 0, 0,1) inset;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1.0) 60%, transparent 100%);
+    width: 100%; 
+}
+
+.begin{
+    color: white;
+    font-family: "Kanit", sans-serif; 
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 8%;
+    padding-bottom: 3%;
 }
 
 
-h6 {
-  font-family: "Kanit", sans-serif;
-  font-size: 3em;
-  position: relative;
-  top: 12vh;
-  left: 37%;
+.container2{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+  padding-top: 2%;
 }
-
-.container2 {
-  font-family: "Kanit", sans-serif;
-  background-color: transparent;
-  font-weight: 300;
-  
-  position:relative;
-  top: 7.5vw;
-  left: -1%;
+.cdt{
+    color:white;
+    font-weight: 400;
+}
+.st3{
+  color:aliceblue;
   text-align: center;
+  text-transform: uppercase;
+  border-right: 4px solid rgba(255, 0, 0, 0.53);
 }
 
-
-ul.date li {
+ul.date li{
   display: inline-block;
   font-size: 1.5em;
   color:aliceblue;
-  list-style-type: none;
-  padding: 2em;
+  text-align: center;
+ 
+  padding-left: 2em;
+  padding-right: 2em;
   text-transform: uppercase;
 }
-
 ul.date li span {
-  display: block;
+  text-align: center;
   font-size: 4.5rem;
 }
 
@@ -109,7 +119,59 @@ ul.date li span {
 }
 
 
+/*flexbox*/
+.topau{
+  width: 100%;
+  text-align: center;
+}
 
+.au-title{
+  color: white;
+  font-size: 4.7em;
+  font-family: "Kanit", sans-serif; 
+  font-weight: 600;
+  text-align: center;
+  
+}
+
+.au-title:after{
+  color: white;
+  font-size: 5em;
+  font-family: "Kanit", sans-serif; 
+  font-weight: 600;
+  text-align: center;
+  content: '';
+  display: block;
+  position: relative;
+  width: 52%;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.637);
+}
+
+.bottomau{
+  margin-top: 6%;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.flex-container{
+  margin-top: 30%;
+}
+
+.text-area{
+  background-color: rgba(255,255,255,0.2);
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.text{
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Kanit", sans-serif; 
+  font-weight: 200;
+  line-height: 1.6;
+}
 
 
 
@@ -119,11 +181,51 @@ ul.date li span {
 
 /*EVENTS*/
 
-.events{
-  font-family: "Kanit", sans-serif;
-  position: absolute;
-  top: 394vh;
+.flex-container2{
+  margin-top: 25%;
+  justify-content: center;
 }
+
+.evtitle{
+  width: 100%;
+  text-align: center;
+}
+.evtitle:after {
+  content: '';
+  display: block;
+  position: relative;
+  margin-left: 50%;
+  width: 50%;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.637);
+}
+.evtext{
+  color: white;
+  font-size: 4.7em;
+  font-family: "Kanit", sans-serif; 
+  font-weight: 600;
+}
+
+
+
+
+
+.center-container{
+  display: flex;
+  justify-content: center;
+}
+
+.evcontent{
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-top: 6%;
+  justify-content: center;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: 350px; 
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  grid-gap: 8em;
+}
+
 
 .overlay {
   position: absolute;
@@ -133,17 +235,22 @@ ul.date li span {
   height: 100%;
   background: rgb(27, 45, 49);
   opacity: 60%;
-  
-  border-radius: 100px;
+  border-radius: 30%;
   transition: background 0.5s ease;
+}
+
+article{
+  width: 100%;
+  height: 90%;
 }
 
 .container3 {
   perspective: 1000px;
-  margin: 4%;
   position: relative;
-  width: 380px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .flipper {
@@ -175,7 +282,6 @@ ul.date li span {
 }
 
 
-
 .container3:hover .overlay {
   display: block;
   background: rgb(42, 43, 43);
@@ -183,18 +289,17 @@ ul.date li span {
 
 .eventimg {
   position: absolute;
-  width: 380px;
-  height: 300px;
-  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  border-radius: 30%;
   filter: brightness(90%); 
 }
 
 .title {
   position: absolute;
-  width: 500px;
-  left: -50px;
+  width: 100%;
   top: 110px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
@@ -207,182 +312,256 @@ ul.date li span {
   top: 90px;
 }
 
-.button1 {
-  position: absolute;
-  width: 300px;
-  left:-35px;
-  top: 140px;
+/*EVENTS Buttons*/
+/*2 common buttons for 7 cards*/
+.button1{
+  width: 45%;
+  position: relative;
   text-align: center;
-  transform: translate(0, -50%);
   transition: opacity .35s ease;
   z-index: 1;
+  top: 35%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 28%;
+  transform: translate(0, -50%);
 }
-
-
-.button1 a {
-  width: 70px;
+.button1 a{
+  width: 100%;
   padding: 12px 30px;
   text-align: center;
   color: white;
   border: solid 2px rgb(255, 255, 255);
   z-index: 1;
-
-
+  
 }
 
-.button2 {
-  position: absolute;
-  width: 200px;
-  left:170px;
-  top: 140px;
-  text-align: center;
-  transform: translate(0, -50%);
-  transition: opacity .35s ease;
-  z-index: 1;
-}
-
-
-.button2 a {
-  width: 170px;
-  padding: 12px 20px;
-  text-align: center;
-  color: white;
-  border: solid 2px rgb(255, 255, 255);
- 
-}
-
-/*for 2 link events total 3 buttons*/
-/*Register button1*/
-.button1-1 {
-  position: absolute;
-  width: 170px;
-  left:20px;
-  top: 120px;
-  text-align: center;
-  transform: translate(0, -50%);
-  opacity: 1;
-  transition: opacity .35s ease;
-  z-index: 1;
-}
-
-
-.button1-1 a {
-  width: 170px;
-  padding: 12px 20px;
-  text-align: center;
-  color: white;
-  border: solid 2px rgb(255, 255, 255);
-  z-index: 1;
-}
-
-/*register button2*/
-.button1-2 {
-  position: absolute;
-  width: 170px;
-  left:190px;
-  top: 120px;
-  text-align: center;
-  transform: translate(0, -50%);
-
-  transition: opacity .35s ease;
-}
-
-
-.button1-2 a {
-  width: 170px;
-  padding: 12px 20px;
-  text-align: center;
-  color: white;
-  border: solid 2px rgb(255, 255, 255);
-}
-
-/*Rule book*/
-.button2-1 {
-  position: absolute;
-  width: 200px;
-  left:90px;
-  top: 190px;
-  text-align: center;
-  transform: translate(0, -50%);
-  transition: opacity .35s ease;
-}
-
-
-.button2-1 a {
-  width: 170px;
-  padding: 12px 20px;
-  text-align: center;
-  color: white;
-  border: solid 2px rgb(255, 255, 255);
-
-}
-
-
-
-@media all and (max-width: 768px) {
-  body {
-    background-attachment: scroll; /* or unset, depending on your preference */
-
-  }
-  .webgl-container {
-    display: none;
-  }
-
-  .countdown {
-    top: 150px; /* adjust based on your design */
-    height: auto; /* adjust based on your design */
-    width: 100%; /* adjust based on your design */
-  }
-
-  h6 {
-    top: 80px; /* adjust based on your design */
-    left: 50%; /* adjust based on your design */
-    transform: translateX(-50%);
-  }
-
-  .container2 {
-    top: 50px; /* adjust based on your design */
-    left: 0; /* adjust based on your design */
-  }
-
- 
-}
-
-
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-.canvas-container {
+.button2{
+  width: 45%;
   position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top:50%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 28%;
+}
+.button2 a{
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  padding: 12px 22px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
 }
 
-.webgl {
+/*3 buttons for 3rd card*/
+.button3-1{
+  width: 65%;
+  position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top: 30%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 17.5%;
+  transform: translate(0, -50%);
+}
+.button3-1 a{
   width: 100%;
-  height: 100%;
-  display: block;
+  padding: 12px 30px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+  
 }
 
-body {
-  overflow-x: hidden;
+.button3-2{
+  width: 65%;
+  position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top:40%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 17.5%;
+}
+.button3-2 a{
+  width: 100%;
+  padding: 12px 22px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.button3-3{
+  width: 65%;
+  position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top:53%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 17.5%;
+}
+.button3-3 a{
+  width: 100%;
+  padding: 12px 22px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+/*4 buttons for 1st card*/
+.button1-1{
+  width: 65%;
+  position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top: 19%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 17.5%;
+  transform: translate(0, -50%);
+}
+.button1-1 a{
+  width: 100%;
+  padding: 12px 30px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+  
+}
+
+.button1-2{
+  width: 65%;
+  position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top:29%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 17.5%;
+}
+.button1-2 a{
+  width: 100%;
+  padding: 12px 22px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.button1-3{
+  width: 65%;
+  position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top:42%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 17.5%;
+}
+.button1-3 a{
+  width: 100%;
+  padding: 12px 22px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.button1-4{
+  width: 65%;
+  position: relative;
+  text-align: center;
+  transition: opacity .35s ease;
+  z-index: 1;
+  top:55%;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-left: 17.5%;
+}
+.button1-4 a{
+  width: 100%;
+  padding: 12px 22px;
+  text-align: center;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  z-index: 1;
 }
 
 
-@media screen and (max-width: 900px) {
-  body {
-    background-image: url("assets/Untitled design (13).png");
-    background-color: black;
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%; /* Ensure the background covers the entire viewport height */
-    width: 100%;
-    margin: 0;
-  }
+
+
+/*Footer*/
+
+.footer-area {
+  background-color: rgba(0, 0, 0, 0.352);
+  display: flex;
+  flex-direction: column; /* Change to column direction */
+  justify-content: center;
+  align-items: center; /* Align items to center */
+  text-align: center;
+  width: 100%;
+  height: 13vh; /* Use viewport height for responsiveness */
+  margin-top: 17%; /* Use pixels for margin-top */
+}
+
+.footer-text {
+  position: relative;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-weight: lighter;
+  font-size: 1em;
+  margin-bottom: 1%; /* Add some bottom margin for spacing */
+}
+
+.social-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Change to column direction */
+  align-items: center; /* Align items to center */
+}
+
+.social-menu .fab {
+  font-size: 2em;
+  line-height: 60px;
+  transition: 0.3s;
+  color: #000;
+}
+
+.social-menu .fab:hover {
+  color: #fffbfb;
+}
+
+.social-menu a {
+  position: relative;
+  width: 60px;
+  height: 60px; /* Set a fixed height for consistency */
+  border-radius: 50%;
+  background-color: #ffffff97;
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  transform: scale(0.7);
+  margin-bottom: 10px; /* Add some bottom margin for spacing */
+}
+
+.social-menu a:hover {
+  transform: translate(0, 1.2%);
+  background-color: #ff00005c;
 }
 
 

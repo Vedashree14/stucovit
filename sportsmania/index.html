@@ -10,83 +10,80 @@
     <title>Sportsmania Home</title>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Gruppo&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Gruppo&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 
   </head>
-<body style="background-color: transparent; width: 100%; height: auto; ">
+
+
+
+  <body>
+    <div id="loading-overlay">
+      <video id="videoFrame" src="assets/WhatsApp Video 2024-01-18 at 06.43.29 (1).mp4" autoplay muted playsinline></video>
+  </div>
   
-    
+  <script>
+      window.addEventListener('load', function () {
+          // Display loading video for 10 seconds (10000 milliseconds)
+          setTimeout(function () {
+              document.getElementById('loading-overlay').style.display = 'none';
+              document.getElementById('main-content').style.display = 'block';
+          }, 5000);
+      });
+  </script>
+  
+  <style>
+      #loading-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: black; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+      }
+  
+      #loading-overlay video {
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: block;
+          transform: scale(0.4);
+      }
+  
+      #main-content {
+          display: none;
+      }
+  </style>
+  
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<!--preloader-->
-<div id="loading-overlay">
-  <iframe width="100%" height="100%" src="assets/WhatsAppVideo2024-01-18at06.43.29-ezgif.com-crop (1).gif" frameborder="0" allowfullscreen></iframe>
-</div>
-<script>
-  window.addEventListener('load', function () {
-            // Display loading video for 5 seconds (5000 milliseconds)
-            setTimeout(function () {
-                document.getElementById('loading-overlay').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
-            }, 5000);
-  });
-</script>
-<style>
-#loading-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: black; /* Adjust the background color as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-#loading-overlay iframe {
-  width: 100%; /* Adjust the width as needed */
-  height: 100%; /* Adjust the height as needed */
-  margin-left: 43%;
-  margin-top: 25%;
-}
-
-#main-content {
-  display: none;
-}
-
-@media (max-width: 768px) {
-    #loading-overlay iframe {
-        width: 100%; /* Adjust for smaller screens */
-        height: 100%; /* Adjust for smaller screens */
-        margin-left: 15%; /* Adjust for smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    #loading-overlay iframe {
-        width: 95%; /* Further adjustment for smaller screens */
-        height: 95%; /* Further adjustment for smaller screens */
-        margin-left: 2.5%; /* Further adjustment for smaller screens */
-        
-    }
-}
-</style>
-
-  <div id="part1">
-    <nav class = "navbar fixed-top navbar-expand-sm navbar-dark">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <nav class = "navbar fixed-top navbar-expand-sm navbar-dark">
       <div class="container-fluid">
       <a
         href="index.html"
         class="navbar-brand mb-0 h1">
           <img 
-          class="d-inline-block align-top"
+          class="d-inline-block align-top" id="logo"
           src="assets\WhatsApp_Image_2024-01-11_at_06.41.54_Resize-removebg-preview.png"
           alt="Logo"
           width="75" height="75">
@@ -95,12 +92,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item" id="nav1">
-              <a class="nav-link active" aria-current="page" href="#ev">EVENTS</a>
+              <a class="nav-link active" aria-current="page"  href="#ev">EVENTS</a>
             </li>
             <li class="nav-item" id="nav2">
-              <a class="nav-link" href="#auinfo">ABOUT</a>
+              <a class="nav-link active" aria-current="page" href="#ab-title">ABOUT</a>
             </li>
             <li class="nav-item" id="nav3">
               <a class="nav-link" href="Gallery.html" tabindex="-1">GALLERY</a>
@@ -112,80 +109,132 @@
         </div>
       </div>
     </nav>
-  
-
-  
-  
 
 
+<div class="glb">
+  <div id="name-video">
+    <video id="logo-vid" src="assets/ezgif-2-f753664e23.mp4" autoplay playsinline loop></video>
+</div>
+</div>
+<style>
+ .glb {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+}
 
-<div class="canvas-container">
-  <canvas class="webgl"></canvas>
-</div> 
-    
-    <script type="module" src="index2.js"></script>    
-    
-    <div class="countdown" >
-      
-      <h6 style="color:aliceblue;font-family: 'Kanit', sans-serif; font-weight: 700; font-size: 3vw; top: 24%; left:43%";>BEGINS IN</h6>
+#name-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 6.5%;
+}
 
-      <div class="container2">
-        
-          <ul class="date" >
+#logo-vid {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  box-shadow: 0px 0px 160px 140px rgba(0, 0, 0,1) inset;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 60%, transparent 100%);
+}
 
-            <li> <span id="days"></span><p style="color:rgb(255, 255, 255); font-weight: 400;">days</p></li>
-            <li> <span id="hours"></span><p style="color:rgb(255, 255, 255); font-weight: 400;">Hours</p></li>
-            <li><span id="minutes"></span><p style="color:rgb(255, 255, 255); font-weight: 400;">Minutes</p></li>
-            <li><span id="seconds"></span><p style="color:rgb(255, 255, 255); font-weight: 400;">Seconds</p></li>
 
-          </ul>  
+</style>
+
+
+
+<!--countdown-->
+<div class="countdown" >
+
+    <div>
+    <h6 class="begin">BEGINS IN</h6>
     </div>
-    </div>
-    <style>
-    .v2 {
-      border-left: 0.3vh solid rgb(255, 0, 0);
-      height: 19vh;
-      top: 163vh;
-      position: absolute;
-      margin-left: -0.3vh;
+    
+    <div class="container2">
+        <ul class="date" >
+          <li class="st3"><span id="days"></span><p class="cdt">days</p></li>
+          <li class="st3"><span id="hours"></span><p class="cdt">Hours</p></li>
+          <li class="st3"><span id="minutes"></span><p class="cdt">Minutes</p></li>
+          <li class="last"><span id="seconds"></span><p class="cdt">Seconds</p></li>
+        </ul>  
+  </div>
+  </div>
+
+  <script>(function () {
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+  
+    //I'm adding this section so I don't have to keep updating this pen every year :-)
+    //remove this if you don't need it
+    let today = new Date(),
+        dd = String(today.getDate()).padStart(2, "0"),
+        mm = String(today.getMonth() + 1).padStart(2, "0"),
+        yyyy = today.getFullYear(),
+        nextYear = yyyy + 1,
+        dayMonth = "02/07/",
+        eventday = dayMonth + yyyy;
+    
+    today = mm + "/" + dd + "/" + yyyy;
+    if (today > eventday) {
+      eventday = dayMonth + nextYear;
     }
-    </style>
-
-    <div class="v2" style="left: 37%;"></div>
-    <div class="v2" style="left: 48.5%;"></div>
-    <div class="v2" style="left: 61.5%;"></div>
-  
-    <!-- ABOUT US PART -->
-
-    <h4 class="AUTitle" style="color:rgb(255, 255, 255);  font-weight: 800; font-family: 'Kanit', sans-serif; font-weight: 400 ;font-size: 9vh ;position: absolute; left: 6.5%; top: 285%;">ABOUT<br>US</h4>
-    <div class="about"  style="left: 55vh; top: 258vh; position: absolute;  background-color: rgba(255, 255, 255, 0.2); height: 67%; width: 100%;">
-    </div>
+    //end
     
-      <pre id="auinfo" style="top: 270vh; left: 64vh; position: absolute; font-family: 'Kanit', sans-serif; font-size: 1.5rem; font-weight: 200; color:white;">The Vidyalankar Institute of Technology Sports Council is a dynamic body committed to<br>fostering a culture of sports and physical fitness within the institute.<br>Dedicated to promoting teamwork, discipline, and a healthy lifestyle, the council<br>organizes various sporting events and activities throughout the academic year.  It aims<br>to provide students with opportunities to excel in both individual and team sports,<br>nurturing their overall development.<br>The Sports Council strives to create a vibrant sports community,<br>encouraging participation from all students and promoting a sense of sportsmanship<br>and camaraderie.</pre>
-    </div>
+    const countDown = new Date(eventday).getTime(),
+        x = setInterval(function() {    
   
+          const now = new Date().getTime(),
+                distance = countDown - now;
+  
+          document.getElementById("days").innerText = Math.floor(distance / (day)),
+            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+  
+          //do something later when date is reached
+          if (distance < 0) {
+            document.getElementById("headline").innerText = "Let the game Begin!!!";
+            document.getElementById("countdown").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            clearInterval(x);
+          }
+          //seconds
+        }, 0)
+    }());
+    </script>
 
-    <style>
-      .vl {
-        border-left: 0.3vh solid rgb(255, 0, 0);
-        height: 52vh;
-        position: absolute;
-        left: 25%;
-        top: 265vh;
-        margin-left: -3vh;
-      }
-      </style>
+<div class="full-content">
+
+<div class="flex-container">
+  <div class="topau">
+      <div class="au-title" id="ab-title">
+      <h>ABOUT US</h>
+      </div>
+  </div>
+  <div class="bottomau">
+  <div class="text-area">
+    <p class="text">The Vidyalankar Institute of Technology Sports Council is a dynamic body committed to fostering a culture of sports and physical fitness within the institute. Dedicated to promoting teamwork, discipline, and a healthy lifestyle, the council organizes various sporting events and activities throughout the academic year.  It aims to provide students with opportunities to excel in both individual and team sports, nurturing their overall development. The Sports Council strives to create a vibrant sports community, encouraging participation from all students and promoting a sense of sportsmanship and camaraderie.</p>
+  </div>
+  </div>
+  
+</div>
+
+
+  <!--EVENTS-->
+  <div class="flex-container2">
+
+    <div class="evtitle" id="ev">
+      <h class="evtext">EVENTS</h>
+    </div>
+
+    <div class="center-container">
+    <div class="evcontent">
       
-      <div class="vl"></div>
-
-    <!-- EVENTS PART -->
-    
-    <h4 class="eventTitle" id="ev" style="color:rgb(255, 255, 255); font-weight: 800; font-family: 'Kanit', sans-serif; font-weight: 400 ; font-size: 9vh ;position: absolute; left: 44%; top: 380vh;">EVENTS</h4>
-
-
-    <div class="events">
-
-      <div class="container3" id="box" style="left: 100px; top: 45px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/Basketball (1).jpg" alt="" />
@@ -196,14 +245,13 @@
             
             <div class="button1-1"><a href="https://forms.gle/jDVjJiEKX9BMRvmS9"> REGISTER (Boys) </a></div>
             <div class="button1-2"><a href="https://forms.gle/T7r9ViB6MHhmC1xcA"> REGISTER (Girls) </a></div>
-            <div class="button2-1" style="left: 1%;"><a href="assets/RuleBooks/Basketball Rules.pdf"> RULE BOOK </a></div>
-            <div class="button2-1" style="left: 47%;"><a href="assets/RuleBooks/Basketball Rules.pdf"> RULE BOOK(3x3) </a></div>
+            <div class="button1-3"><a href="assets/RuleBooks/Basketball Rules.pdf"> RULE BOOK </a></div>
+            <div class="button1-4"><a href="assets/RuleBooks/Basketball Rules.pdf"> RULE BOOK(3x3) </a></div>
           </div>
         </div>
-      </div>
+      </div></article>
       
-
-      <div class="container3" id="box" style="left: 575px; top: -245px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/throwball (1).jpg" alt="" />
@@ -215,9 +263,9 @@
             <div class="button2"><a href="assets/RuleBooks/Throwball rules.pdf"> RULE BOOK </a></div>
           </div>
         </div>
-      </div>
+      </div></article>
 
-      <div class="container3" style=" left: 1050px; top: -560px;" id="box" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/volleyball (1).jpg" alt="" />
@@ -225,15 +273,15 @@
           </div>
           <div class="back">
             <div class="overlay"></div>
-            <div class="button1-1"><a href="https://forms.gle/ha22Cr6dUwLsaWdy8"> REGISTER (Boys) </a></div>
-            <div class="button1-2"><a href="https://forms.gle/vi2k3FdD7XS7KAzj6"> REGISTER (Girls) </a></div>
-            <div class="button2-1"><a href="assets/RuleBooks/Volleyball rules.pdf"> RULE BOOK </a></div>
+            <div class="button3-1"><a href="https://forms.gle/ha22Cr6dUwLsaWdy8"> REGISTER (Boys) </a></div>
+            <div class="button3-2"><a href="https://forms.gle/vi2k3FdD7XS7KAzj6"> REGISTER (Girls) </a></div>
+            <div class="button3-3"><a href="assets/RuleBooks/Volleyball rules.pdf"> RULE BOOK </a></div>
             
           </div>
         </div>
-      </div>
+      </div></article>
 
-      <div class="container3" id="box" style="left: 100px; top: -510px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/kabaddi (1).jpg" alt="" />
@@ -245,9 +293,9 @@
             <div class="button2"><a href="assets/RuleBooks/Kabaddi rules.pdf"> RULE BOOK </a></div>
           </div>
         </div>
-      </div>
+      </div></article>
 
-      <div class="container3" id="box" style="left: 575px; top: -825px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/long football (1).jpg" alt="" />
@@ -259,9 +307,9 @@
             <div class="button2"><a href="assets/RuleBooks/Long Football rules.pdf"> RULE BOOK </a></div>
           </div>
         </div>
-      </div>
+      </div></article>
 
-      <div class="container3" id="box" style="left: 1050px; top: -1140px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/Rink football.png" alt="" />
@@ -273,12 +321,12 @@
             <div class="button2"><a href="assets/RuleBooks/Rink Football rules.pdf"> RULE BOOK </a></div>
           </div>
         </div>
-      </div>
+      </div></article>
 
-      <div class="container3" id="box" style="left: 100px; top: -1090px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
-            <img class="eventimg" src="assets/240_F_9986762_PJ3v5iQbokfmRCIJm0Ep8uesCHqN7vWN.jpg" alt="" />
+            <img class="eventimg" src="assets/eventimg/240_F_9986762_PJ3v5iQbokfmRCIJm0Ep8uesCHqN7vWN.jpg" alt="" />
             <p class="title">TABLE TENNIS</p>
           </div>
           <div class="back">
@@ -287,9 +335,9 @@
             <div class="button2"><a href="assets/RuleBooks/Table tennis rules.pdf"> RULE BOOK </a></div>
           </div>
         </div>
-      </div>
+      </div></article>
 
-      <div class="container3" id="box" style="left: 575px; top: -1400px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/carrom (1).jpg" alt="" />
@@ -301,9 +349,9 @@
             <div class="button2"><a href="assets/RuleBooks/Carrom rules.pdf"> RULE BOOK </a></div>
           </div>
         </div>
-      </div>
+      </div></article>
 
-      <div class="container3" id="box" style="left: 1050px; top: -1720px;" data-flip-container>
+      <article><div class="container3" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/chess (1).jpg" alt="" />
@@ -315,63 +363,22 @@
             <div class="button2"><a href="assets/RuleBooks/Chess rules.pdf"> RULE BOOK </a></div>
           </div>
         </div>
+      </div></article>
       </div>
-      
+  </div>
+</div>
 </div>
 
 
+<div class="footer-area">
+  <div class="social-menu" >
+  <h class="footer-text">Follow us for more</h>
+    <a href="https://www.instagram.com/vit_sportsmania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="blank"><i class="fab fa-instagram"></i></a>
+  </div>
 
-
-<!--countdown js-->
-<script>(function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "02/07/",
-      birthday = dayMonth + yyyy;
+  </body>
   
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
-  //end
-  
-  const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
-
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-        //do something later when date is reached
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "Let the game Begin!!!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());</script>
-</body>
 </html>
-
-
-
-
-
 
 
