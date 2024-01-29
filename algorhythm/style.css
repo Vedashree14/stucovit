@@ -130,11 +130,29 @@ body {
 }
 
 .heading {
+  border-right: 3px solid;
   font-size: 9vw;
   font-weight: 400;
-  color: #fff;
+  letter-spacing: 8px;
+  width: 100%;
+  color: #eee;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1.8s steps(10), cursor .4s step-end infinite alternate;
 }
 
+@keyframes cursor {
+  50%{
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }
+}
 .about-btn {
   display: flex;
   justify-content: center;
@@ -149,6 +167,20 @@ body {
   font-weight: 700;
   margin-top: 2vw;
   font-family: "poppins";
+  border-radius: 40px;
+  background: linear-gradient(90deg, #027cff, #101010);
+  letter-spacing: 2px;
+  color: #eee;
+}
+
+span{
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -156,6 +188,30 @@ body {
     height: 85vh;
   }
   .heading {
-    font-size: 15vw;
+    font-size: 11vw;
+  }
+  .insta{
+    margin-top: -145px;
   }
 } 
+
+.heading{
+  text-shadow: 0px 0 5px #ffffff, 0 0 10px #2717de, 0 0 30px #1620e0, 0 0 35px #7069f5;
+}
+.insta h2{
+  color: #eee;
+  position: absolute;
+  text-shadow: 0px 0 5px #ffffff, 0 0 10px #1a17de, 0 0 30px #1620e0, 0 0 35px #7069f5;
+}
+.insta a{
+  pointer-events: all;
+  color: #eee;
+  margin-left: 300px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  text-shadow: 0px 0 5px #ffffff, 0 0 10px #1a17de, 0 0 30px #1620e0, 0 0 35px #7069f5;
+}
+.insta  a .insta-logo:hover{
+  scale: 140%;
+}

@@ -18,7 +18,7 @@ ul li{
     
     list-style: none;
     color: #484848;
-    font-family: Tektur;
+    font-family: Poppins;
     font-size: 5rem; 
     letter-spacing: 15px;
     animation: animate 1.4s linear infinite;
@@ -68,7 +68,10 @@ ul li:nth-child(10){
     animation-delay: 1.1s;
 }
 
-@media screen {
+@media screen and (max-width: 600px){
+    ul li{
+        font-size: 2rem;
+    }
     
 }
  /* body{

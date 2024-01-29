@@ -96,11 +96,12 @@ header {
 }
 header .logo img {
   font-weight: bold;
-  height: 120px;
+  height: 166px;
   position: fixed;
   top: 0;
   left: 0;
-  margin: 10px;
+  margin-top: -36px;
+  margin-left: 122px;
 }
 header .menu {
   padding: 0;
@@ -212,7 +213,7 @@ header .menu a:hover{
   z-index: 100;
 }
 .arrows button {
-  background-color: #eee5;
+  background-color: #000;
   border: none;
   font-family: monospace;
   width: 40px;
@@ -267,9 +268,32 @@ header .menu a:hover{
     justify-content: start;
   }
   .slider .list .item .content h2 {
-    font-size: 60px;
+    font-size: 50px;
   }
   .arrows {
     top: 10%;
+  }
+  .arrows button{
+    background-color: #eee1;
+    color: #000;
+    font-weight: 700;
+  }
+  .logo{
+    margin: 0 auto;
+  }
+  .content{
+    margin: 50px -20px;
+  }
+  #myImage{
+    margin: -26px;
+    padding: 7px;
+    height: 90px;
+  }
+  header ul{
+    width: 110%;
+  }
+  
+  header .menu a{
+    font-size: 15px;
   }
 }
