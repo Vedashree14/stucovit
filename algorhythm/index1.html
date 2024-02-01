@@ -7,11 +7,16 @@
     <meta name="theme-color" content="#ffffff">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic%7CDroid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" >
-    <link rel="icon" type="image/x-icon" href="image/159-1.png">
+    <link rel="stylesheet" href="AboutButton.css">
+    <link rel="icon" href="favicon/favicon-32x32.png" type="image/png" >
     <meta name="viewport" content="width=device-width" >
     <meta charset="UTF-8" >
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tektur"
+    />
+     <link rel="icon" href="favicon/favicon-32x32.png" type="image/png" >
      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,17 +27,22 @@
   <body id="width">
     <div id="main">
       <div id="back">
-        <video autoplay muted loop src="image/compressed/pexels_videos_1.mp4"></video>
-        <video autoplay muted loop src="image/compressed/pexels_videos_2.mp4"></video>
-        <video autoplay muted loop src="image/compressed/pexels_videos_3.mp4"></video>
-        <video autoplay muted loop src="image/compressed/pexels_videos_4.mp4"></video>
-        <video autoplay muted loop src="image/compressed/pexels_videos_5.mp4"></video>
-        <video autoplay muted loop src="image/compressed/pexels_videos_6.mp4"></video>
-        <video autoplay muted loop src="image/compressed/pexels_videos_7.mp4"></video>
-        <video autoplay muted loop src="image/compressed/pexels_videos_8.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637480/pexels-space-10_stgv3q.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637043/pexels-space-2_a3g463.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637043/pexels-space-3_mljwy9.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637046/pexels-space-4_jjqouc.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637034/pexels-space-5_zzxvu3.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637029/pexels-space-6_ymu1fl.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637026/pexels-space-7_t36mzj.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637024/pexels-space-8_prjeke.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637047/pexels-space-9_ymrear.mp4"></video>
+        <video autoplay muted loop src="https://res.cloudinary.com/daquyxgqa/video/upload/v1706637051/pexels-space-1_y1rxsg.mp4"></video>
       </div>
+
       <script>
+        
         if (screenSize <=600){
+
           var ChangedId = document.getElementById("back");
           ChangedId.id = "top";
           ChangedId.innerHTML = ' ' ;
@@ -85,15 +95,15 @@
             // }
             }
           changeBg();
-          setInterval(changeBg ,15000);
+          setInterval(changeBg ,5000);
                 video1.autoplay = true;
                 video1.muted = true;
                 video1.loop = true;
                 video1.style.objectFit = "cover";
                 video1.style.width = "100%";
                 video1.style.height = "100%";
-          
         }
+
 
         
 
@@ -107,6 +117,7 @@
               <a href="About.html">About</a>
               <a href="ContactUs.html">Contact Us</a>
               <a href="Gallery.html">Gallery</a>
+              <a href="https://lu.ma/mqw0w22k" id="nav5">Gate Pass</a>
               <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <box-icon name='menu-alt-right' color='#ffffff' size="lg"></box-icon>
               </a>
@@ -115,10 +126,27 @@
             <div id="content">
               <div id="left">
                 <div class="name">
-                  <h1 class="heading">Algorhythm</h1>
+                  <h1 class="heading" id="heading">Algorhythm</h1>
                 </div>
                 <div class="about-btn">
-                  <button onclick="redirectToAnotherWebsite()" class="about-us">ABOUT US</button>
+                  <button onclick="redirectToAnotherWebsite()" class="about-us">
+                    <a href="./About.html" class="link" class="about-us">
+                    <svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="link__svg" aria-labelledby="link1-title link1-desc">
+                      <title id="link1-title">Come quick and click this</title>
+                      <desc id="link1-desc">A rotating link with text placed around a circle with an arrow inside</desc>
+
+                      <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none" fill="none" />
+
+                      <path class="link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115"  fill="none" />
+
+                      <text class="link__text">
+                        <textPath href="#link-circle" stroke="none">
+                          About Us About Us About Us
+                        </textPath>
+                      </text>
+                    </svg>
+                  </a>
+                  </button>
                 </div>
               </div>
             </div>

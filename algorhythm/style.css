@@ -45,12 +45,14 @@ body {
 #workingarea {
   position: relative;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   height: 100vh;
   max-width: 1920px;
 }
-#nav{
+
+#nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -59,11 +61,17 @@ body {
   transition: all 2s ease-in;
 }
 
-#nav img{
+.left-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#nav img {
   height: 16vh;
 }
 
-#nav a{
+#nav a {
   pointer-events: all;
   text-decoration: none;
   text-transform: uppercase;
@@ -74,7 +82,7 @@ body {
 }
 
 #nav a:hover {
-  color: #286ad4;
+  color: #275aae;
   scale: 110%;
 }
 
@@ -82,7 +90,13 @@ body {
   display: none;
 }
 
-@media only all and (max-width: 600px) { 
+@media only all and (max-width: 600px) {
+  #nav .dplogo {
+    display: contents;
+    width: 2px;
+    height: 2px;
+    float: left;
+  }
   #nav {
     display: flex;
     flex-direction: column;
@@ -92,8 +106,9 @@ body {
     width: 100%;
     background-color: transparent;
     transition: all 2s ease-in;
+    z-index: 999;
   }
-  #nav a{
+  #nav a {
     display: none;
   }
   #nav a.icon {
@@ -103,7 +118,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-
+  #top #workingarea #nav #nav5 {
+    margin-right: 0px;
+  }
   #nav.responsive {
     position: relative;
   }
@@ -119,7 +136,6 @@ body {
     display: block;
     text-align: right;
   }
-
 }
 #content {
   height: 70vh;
@@ -130,6 +146,8 @@ body {
 }
 
 .heading {
+  margin: 20px;
+  padding: 20px;
   border-right: 3px solid;
   font-size: 9vw;
   font-weight: 400;
@@ -139,17 +157,17 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 1.8s steps(10), cursor .4s step-end infinite alternate;
+  animation: typing 2s steps(10), cursor 0.4s step-end infinite alternate;
 }
 
 @keyframes cursor {
-  50%{
+  50% {
     border-color: transparent;
   }
 }
 
 @keyframes typing {
-  from{
+  from {
     width: 0;
   }
 }
@@ -157,6 +175,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
 .about-us {
@@ -165,22 +184,21 @@ body {
   padding: 22px 22px;
   font-size: 1em;
   font-weight: 700;
+  z-index: 9999 !important;
   margin-top: 2vw;
   font-family: "poppins";
-  border-radius: 40px;
-  background: linear-gradient(90deg, #027cff, #101010);
+  background-color: transparent;
+  border: none;
   letter-spacing: 2px;
-  color: #eee;
 }
 
-span{
+span {
   position: absolute;
   background: #fff;
   transform: translate(-50%, -50%);
   pointer-events: none;
   border-radius: 50%;
   animation: animate 1s linear infinite;
-  
 }
 
 @media screen and (max-width: 600px) {
@@ -188,30 +206,49 @@ span{
     height: 85vh;
   }
   .heading {
+    height: 100px;
     font-size: 11vw;
   }
-  .insta{
+  .insta {
     margin-top: -145px;
   }
-} 
-
-.heading{
-  text-shadow: 0px 0 5px #ffffff, 0 0 10px #2717de, 0 0 30px #1620e0, 0 0 35px #7069f5;
 }
-.insta h2{
+
+.heading {
+  text-shadow: 0px 0 2px #ffffff, 0 0 5px #f8f8ff, 0 0 15px #e6e7ff;
+}
+.insta h2 {
   color: #eee;
   position: absolute;
-  text-shadow: 0px 0 5px #ffffff, 0 0 10px #1a17de, 0 0 30px #1620e0, 0 0 35px #7069f5;
+  text-shadow: 0px 0 2px #ffffff, 0 0 2px #f8f8ff, 0 0 0px #e6e7ff;
 }
-.insta a{
+.insta a {
   pointer-events: all;
   color: #eee;
   margin-left: 300px;
   font-size: 24px;
   cursor: pointer;
   transition: all 0.2s ease-in;
-  text-shadow: 0px 0 5px #ffffff, 0 0 10px #1a17de, 0 0 30px #1620e0, 0 0 35px #7069f5;
+  text-shadow: 0px 0 2px #ffffff, 0 0 5px #f8f8ff, 0 0 15px #e6e7ff;
 }
-.insta  a .insta-logo:hover{
+.insta a .insta-logo:hover {
   scale: 140%;
+}
+
+#top #workingarea #nav #nav5 {
+  animation-name: glow;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #0026ff;
+  margin-right: 20px;
+  font-weight: 800;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 30px #9294ff, 0px 0px 30px #9892ff;
+  }
+  to {
+    text-shadow: 0px 0px 40px #0a2996, 0px 0px 40px #0a2394;
+  }
 }
