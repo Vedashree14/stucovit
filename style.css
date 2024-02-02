@@ -172,6 +172,8 @@ section{
 
 
 .parallax-home #text{
+  filter : drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  filter: sepia(70%) saturate(60%) drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
   position: absolute;
   transform: translateY(-50%);
 }

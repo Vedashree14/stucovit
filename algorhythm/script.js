@@ -1,4 +1,3 @@
-
 Shery.imageEffect("#back", {
   style: 4,
   config: {
@@ -57,5 +56,9 @@ function redirectToAnotherWebsite() {
   window.location.href = "About.html";
 }
 
+function removeTheCursor() {
+  var heading = document.getElementById("heading");
+  heading.style.borderRight = "none";
+}
 
-
+setInterval(removeTheCursor, 2000);

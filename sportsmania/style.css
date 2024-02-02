@@ -344,6 +344,14 @@ article{
   top: 90px;
 }
 
+@media(min-width: 1315px){
+#carrom{
+ margin-left: 70%;
+}
+#chess{
+  margin-left: 70%;
+}
+}
 /*EVENTS Buttons*/
 /*2 common buttons for 7 cards*/
 .button1{

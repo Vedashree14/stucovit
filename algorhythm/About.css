@@ -117,6 +117,7 @@ body {
 }
 .about-content .home:hover {
   background-color: #3e8e41;
+  scale: 107%;
 }
 
 @media screen and (max-width: 768px) {
